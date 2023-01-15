@@ -1,3 +1,13 @@
 h1 {
   color: blueviolet;
 }
+.container {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.weather-app-wrapper {
+  border-radius: 10px;
+  color: grey;
+  border: 3px solid #dadde1;
+}
