@@ -15,7 +15,8 @@ body {
 
 h1 {
   font-size: 50px;
-  margin: 
+  margin: 5px;
+  padding: 5px;
   display: block;
   color: rgb(135, 135, 135);
 }
