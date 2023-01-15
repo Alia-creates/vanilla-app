@@ -3,11 +3,17 @@ h1 {
 }
 .container {
   max-width: 650px;
-  margin: 30px auto;
-  padding: 20px;
+  margin: 45px auto;
+  padding: 40px;
 }
 .weather-app-wrapper {
   border-radius: 10px;
   color: grey;
   border: 3px solid #dadde1;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  
 }
