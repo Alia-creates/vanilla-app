@@ -1,6 +1,7 @@
-h1 {
-  color: blueviolet;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 .container {
   max-width: 650px;
   margin: 45px auto;
@@ -13,7 +14,6 @@ h1 {
 }
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
   display: block;
   color: rgb(135, 135, 135);
