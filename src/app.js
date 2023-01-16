@@ -47,8 +47,15 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(event) {
+  event.preventDefault();
+}
+
 let key = "f135e1be3f84490782d52465398cdb5b";
 let apiURL =
   "https://api.openweathermap.org/data/2.5/weather?q=Berkley&appid=f135e1be3f84490782d52465398cdb5b";
 
 axios.get(apiURL).then(showTemperature);
+
+let form = document.querySelector("search-form");
+form.addEventListener("submit", search);
