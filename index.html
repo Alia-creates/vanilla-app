@@ -11,17 +11,17 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1 id="city">weather</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li>last updated</li>
+              <li id="description"></li>
               <li>precipitation</li>
               <li>wind</li>
             </ul>
@@ -39,7 +39,7 @@
                   <div class="float-left">
                     <strong id="temperature"></strong>
                     <span class="units"
-                      ><strong>56 </strong>
+                      ><strong id="temperature"></strong>
                       <span class="units-temperature"
                         ><a href="#">ºF</a> | <a href="#">ºC</a>
                       </span>
@@ -62,7 +62,6 @@
             <div class="container text-center">
               <div class="row">
                 <div class="col-2">Mon</div>
-
                 <div class="col">Tues</div>
                 <div class="col">Wed</div>
                 <div class="col">Thurs</div>
