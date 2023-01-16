@@ -14,6 +14,9 @@ function showTemperature(response) {
 
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
+
+  let pressureElement = document.querySelector("#pressure");
+  pressureElement.innerHTML = response.data.main.pressure;
 }
 
 let key = "f135e1be3f84490782d52465398cdb5b";
