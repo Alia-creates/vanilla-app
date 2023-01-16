@@ -43,10 +43,12 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let key = "f135e1be3f84490782d52465398cdb5b";
 let apiURL =
-  "https://api.openweathermap.org/data/2.5/weather?q=Spain&appid=f135e1be3f84490782d52465398cdb5b";
+  "https://api.openweathermap.org/data/2.5/weather?q=Berkley&appid=f135e1be3f84490782d52465398cdb5b";
 
 axios.get(apiURL).then(showTemperature);
