@@ -47,9 +47,10 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function search(event) {
+function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
+  console.log(cityInputElement.value);
 }
 
 let key = "f135e1be3f84490782d52465398cdb5b";
@@ -58,5 +59,5 @@ let apiURL =
 
 axios.get(apiURL).then(showTemperature);
 
-let form = document.querySelector("search-form");
-form.addEventListener("submit", search);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
