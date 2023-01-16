@@ -3,6 +3,7 @@ function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
 }
 
 let key = "f135e1be3f84490782d52465398cdb5b";
