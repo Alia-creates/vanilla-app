@@ -49,6 +49,7 @@ function showTemperature(response) {
 
 function search(event) {
   event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
 }
 
 let key = "f135e1be3f84490782d52465398cdb5b";
