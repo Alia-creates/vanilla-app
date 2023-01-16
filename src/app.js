@@ -11,6 +11,9 @@ function showTemperature(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = response.data.wind.deg;
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
 }
 
 let key = "f135e1be3f84490782d52465398cdb5b";
