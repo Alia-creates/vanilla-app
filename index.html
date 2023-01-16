@@ -19,7 +19,22 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
+            <form id="search-form">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    placeholder="Type a city..."
+                    class="form-control"
+                  />
+                </div>
+                <div class="col-3">
+                  <input type="submit" value="Search" />
+                </div>
+              </div>
+            </form>
             <h1 id="city"></h1>
+
             <ul>
               <li id="date"></li>
               <li id="description"></li>
@@ -30,13 +45,7 @@
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/1163/1163763.png"
-                  width="90"
-                  height="90"
-                  id="icon"
-                  alt="climate"
-                />
+                <img src="" width="90" height="90" id="icon" alt="climate" />
                 <div class="col-lg-6 col-md-6 col-sm-8">
                   <div class="float-left">
                     <strong id="temperature"></strong>

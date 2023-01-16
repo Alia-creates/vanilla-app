@@ -52,3 +52,10 @@ li {
   position: relative;
   top: -20px;
 }
+.col-9 {
+  padding: 25px;
+  margin-top: 5px;
+}
+.col-3 {
+  margin-top: 30px;
+}
