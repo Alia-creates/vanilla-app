@@ -68,3 +68,12 @@ li {
 .units-temperature .active:hover {
   text-decoration: none;
 }
+
+.units-temperature .action {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.units-temperature .action:hover {
+  text-decoration: none;
+}
