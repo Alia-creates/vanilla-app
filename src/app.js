@@ -47,17 +47,20 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function search(city) {
+  let key = "f135e1be3f84490782d52465398cdb5b";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+
+  axios.get(apiURL).then(showTemperature);
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   console.log(cityInputElement.value);
 }
 
-let key = "f135e1be3f84490782d52465398cdb5b";
-let apiURL =
-  "https://api.openweathermap.org/data/2.5/weather?q=Berkley&appid=f135e1be3f84490782d52465398cdb5b";
-
-axios.get(apiURL).then(showTemperature);
+search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
