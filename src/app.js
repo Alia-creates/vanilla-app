@@ -59,9 +59,13 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+function showCelciusTemperature(event) {
+  event.preventDefault();
+}
 search("Toronto");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", showCelciusTemperature);
