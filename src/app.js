@@ -63,12 +63,16 @@ function handleSubmit(event) {
 
 function showCelsiusTemperature(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let celsiusTemperature = (fahrenheitTemperature - 32) * 0.5556;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 function showFahrenheitTemperature(event) {
   event.preventDefault();
+  fahrenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
@@ -84,4 +88,4 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
-search("Toronto");
+search("Los Angeles");

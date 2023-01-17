@@ -59,3 +59,12 @@ li {
 .col-3 {
   margin-top: 30px;
 }
+
+.units-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.units-temperature .active:hover {
+  text-decoration: none;
+}
