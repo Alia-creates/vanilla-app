@@ -81,3 +81,9 @@ li {
 footer {
   text-align: center;
 }
+
+.weather-forecast {
+  margin-left: 52px;
+  line-height: 50px;
+  text-align: center;
+}
