@@ -77,3 +77,7 @@ li {
 .units-temperature .action:hover {
   text-decoration: none;
 }
+
+footer {
+  text-align: center;
+}
