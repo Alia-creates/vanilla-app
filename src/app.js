@@ -16,8 +16,84 @@ function formatDate(timestamp) {
 }
 
 function displayForecast() {
-  let forecastElement = document.querySelector("forecast");
-  forecastElement.innerHTML = "forecast";
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `
+                <div class="row">
+                <div class="col-2">
+                  <div class="monday-date">Mon</div>
+                  <img
+                    src="https://www.flaticon.com/svg/vstatic/svg/7407/7407048.svg?token=exp=1674105901~hmac=c6d4d5ea23da2eaed0d4930327e581a4"
+                    alt="cloudy-rain"
+                    width="56"
+                  />
+                  <div class="Monday-temperature">
+                    <span class="Monday-units"> 50 | 46 </span>
+                  </div>
+                </div>`;
+
+  forecastHTML =
+    forecastHTML +
+    `
+                <div class="col-2">
+                  <div class="monday-date">Tues</div>
+                  <img
+                    src="https://www.flaticon.com/svg/vstatic/svg/7407/7407048.svg?token=exp=1674105901~hmac=c6d4d5ea23da2eaed0d4930327e581a4"
+                    alt="cloudy-rain"
+                    width="56"
+                  />
+                  <div class="Monday-temperature">
+                    <span class="Monday-units"> 50 | 46 </span>
+                  </div>
+                </div>`;
+
+  forecastHTML =
+    forecastHTML +
+    `
+                <div class="col-2">
+                  <div class="monday-date">Wed</div>
+                  <img
+                    src="https://www.flaticon.com/svg/vstatic/svg/7407/7407048.svg?token=exp=1674105901~hmac=c6d4d5ea23da2eaed0d4930327e581a4"
+                    alt="cloudy-rain"
+                    width="56"
+                  />
+                  <div class="Monday-temperature">
+                    <span class="Monday-units"> 50 | 46 </span>
+                  </div>
+                </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+                <div class="col-2">
+                  <div class="monday-date">Thurs</div>
+                  <img
+                    src="https://www.flaticon.com/svg/vstatic/svg/7407/7407048.svg?token=exp=1674105901~hmac=c6d4d5ea23da2eaed0d4930327e581a4"
+                    alt="cloudy-rain"
+                    width="56"
+                  />
+                  <div class="Monday-temperature">
+                    <span class="Monday-units"> 50 | 46 </span>
+                  </div>
+                </div>`;
+  forecastHTML =
+    forecastHTML +
+    `
+                <div class="col-2">
+                  <div class="monday-date">Fri</div>
+                  <img
+                    src="https://www.flaticon.com/svg/vstatic/svg/7407/7407048.svg?token=exp=1674105901~hmac=c6d4d5ea23da2eaed0d4930327e581a4"
+                    alt="cloudy-rain"
+                    width="56"
+                  />
+                  <div class="Monday-temperature">
+                    <span class="Monday-units"> 50 | 46 </span>
+                  </div>
+                </div>`;
+
+  forecastElement.innerHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function showTemperature(response) {
@@ -94,3 +170,4 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 search("Los Angeles");
+displayForecast();
