@@ -15,7 +15,8 @@ function formatDate(timestamp) {
   return `${day}: ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tues", "Wed", "Thur", "Fri"];
@@ -41,8 +42,10 @@ function displayForecast() {
 }
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiURL =
-    "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}";
+  let apiKey = "f135e1be3f84490782d52465398cdb5b";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  console.log(apiURL);
+  axios.get(apiURL).then(displayForecast);
 }
 
 function showTemperature(response) {
@@ -121,4 +124,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
 search("Los Angeles");
-displayForecast();
