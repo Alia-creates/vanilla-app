@@ -34,11 +34,13 @@ function displayForecast(response) {
         forecastHTML +
         `
                 <div class="col-2">
-                  <div class="monday-date">${formatDay(forecastDay.dt)}</div>
+                  <div class="monday-date">${formatDay(
+                    forecastDay.dt * 1000
+                  )}</div>
                   <img
                     src=" http://openweathermap.org/img/wn/${
-                      forecast.weather[0].icon
-                    }@2x.png
+                      forecastDay.weather[0].icon
+                    }@2x.png"
                     width="56"
                   />
                   <div class="Monday-temperature">
@@ -50,14 +52,14 @@ function displayForecast(response) {
                 `;
     }
   });
-  forecastElement = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "a43564c91a6c605aeb564c9ed02e3858";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
-  console.log(apiURL);
+
   axios.get(apiURL).then(displayForecast);
 }
 
@@ -93,6 +95,7 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   fahrenheitTemperature = response.data.main.temp;
+  getForecast(response.data.coord);
 }
 
 function search(city) {

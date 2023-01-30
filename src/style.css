@@ -26,14 +26,15 @@ li {
 }
 
 .container {
-  max-width: 650px;
-  margin: 45px auto;
+  max-width: 960px;
+  margin: 55px auto;
   padding: 40px;
 }
 .weather-app-wrapper {
   border-radius: 10px;
   color: grey;
   border: 3px solid #dadde1;
+  background: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
 
 .weather-temperature img {
@@ -76,6 +77,10 @@ li {
 
 .units-temperature .action:hover {
   text-decoration: none;
+}
+
+.row {
+  margin-right: 40px;
 }
 
 footer {
